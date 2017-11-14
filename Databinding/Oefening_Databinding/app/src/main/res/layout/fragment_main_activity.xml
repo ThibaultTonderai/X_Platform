@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<data>
+<import type="be.derieuw.thibault.oefening_databinding.model.User"/>
+<import type="android.databinding.ObservableList"/>
+
+<variable
+    name="gebruikers"
+    type="ObservableList&lt;User&gt;"/>
+
+    <variable
+        name="user"
+        type="be.derieuw.thibault.oefening_databinding.model.User"/>
+
+
+</data>
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <Listview
+            android:id="@+id/listViewElementen"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical"
+            app:items="@{gebruikers}"/>
+
+    </LinearLayout>
+</layout>
